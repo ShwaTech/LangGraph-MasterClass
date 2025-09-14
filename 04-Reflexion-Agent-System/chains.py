@@ -48,7 +48,10 @@ llm = ChatGroq(model="llama-3.3-70b-versatile")
 llm_with_tools = llm.bind_tools(tools=[AnswerQuestion], tool_choice="AnswerQuestion")
 
 
-first_responder_chain = first_responder_prompt_template | llm_with_tools | pydantic_parser
+first_responder_chain = first_responder_prompt_template | llm_with_tools
+
+
+validator = PydanticToolsParser(tools=[AnswerQuestion])
 
 
 response = first_responder_chain.invoke({
