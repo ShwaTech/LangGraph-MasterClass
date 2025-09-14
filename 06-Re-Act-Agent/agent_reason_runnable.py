@@ -33,6 +33,5 @@ react_agent_runnable = create_react_agent(
     tools=tools, 
     llm=llm,
     prompt=react_prompt,
-    verbose=True
 )
 
