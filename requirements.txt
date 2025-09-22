@@ -9,3 +9,5 @@ python-dotenv
 grandalf
 pydantic
 langgraph-checkpoint-sqlite
+chromadb
+
